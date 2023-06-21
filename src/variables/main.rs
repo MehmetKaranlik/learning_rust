@@ -1,3 +1,6 @@
+// Rust is Statically typed language
+// This means rust needs to know the types of all variables at compile time
+
 fn main() { 
 
     // Variables can be type annotated.
@@ -31,6 +34,17 @@ fn main() {
     // This will give a compile-time error
     // unmutable = 21;
 
+
+    let n = 1;
+
+    let n2 = 12.1;
+
+    // Rust will automatically convert n to float
+    // But this conversion only applied for this equation only, n is still an integer
+    let n3 = n+n2;
+
+    let n4: f32 = 12.1;
+    let mut n4 : f32 = 13;
     
 
 
