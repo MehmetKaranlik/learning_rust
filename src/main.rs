@@ -1,3 +1,9 @@
+
+
+pub mod variables;
+
 fn main() {
-    println!("Hello, world!  ");
+  variables::basic_variables::variables();
+  variables::shadowing::shadowing();
+  variables::compound_variables::compound_variables();
 }

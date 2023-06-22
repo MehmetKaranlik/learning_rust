@@ -1,6 +1,5 @@
 // Rust is Statically typed language
 // This means rust needs to know the types of all variables at compile time
-
 fn variables() { 
     /*
     Variable types are :
@@ -14,13 +13,11 @@ fn variables() {
     2. Compound Types
         2.1 Tuple 
         2.2 Array 
-        /// see [compound_types.rs](./compound_types.rs) for more details
+        /// see [compound_variables.rs](./compound_variables.rs) for more details
 
     3. Shadowing 
         /// see [shadowing.rs](./shadowing.rs) for more details
      */
-
-    
 
     
 
