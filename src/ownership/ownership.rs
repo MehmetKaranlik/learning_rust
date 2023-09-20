@@ -29,7 +29,7 @@ pub fn ownership() {
     // Non-Primitive types can be empty and does not have fixed size, can grow and shrink
     // Since primitives does have fixed size and cant grow and shrink storing and handling them relatively easy
     // Non - primitive types need to computationally calculate the size of data so its costly to recreate and store them.
-    // Thats why Rust does not copy non-primitive types to the new variable, it moves them to the new variable
+    // That's why Rust does not copy non-primitive types to the new variable, it moves them to the new variable
     // Primitive types include : integers,floats,bool,arrays,chars and others.
     // Non-primitive types include : String, Vectors, Hashmaps and others.
 
