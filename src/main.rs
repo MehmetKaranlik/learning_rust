@@ -4,6 +4,8 @@ mod ownership;
 mod control_flow;
 mod data_structures;
 mod complext_data_types;
+mod enums;
+mod generics;
 
 
 fn main() {
@@ -15,6 +17,7 @@ fn main() {
     //control_flow::control_flow::control_flow();
     // data_structures::stack::stack();
     //complext_data_types::complex_data_types::structs();
-    complext_data_types::traits_and_default_implementations::traits()
+    // complext_data_types::traits_and_default_implementations::traits()
+    // enums::enums::enums()
 }
 
