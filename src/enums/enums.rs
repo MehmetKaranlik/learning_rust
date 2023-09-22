@@ -21,7 +21,7 @@ enum BasicEnum {
 ///An enum where no constructors contain fields are called a field-less enum.
 /// For example, this is a fieldless enum:
 enum FieldlessEnum {
-    Tupple(str),
+    Tupple(i32),
     Struct {
         a: u8,
         b: i32,

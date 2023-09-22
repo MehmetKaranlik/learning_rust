@@ -22,13 +22,19 @@ fn basic_generic_func<T>(value: T) {}
 fn generic_func_with_restraint<const T: i32>() {}
 
 /// Where clause generally used for if generic is amount is higher, it helps for readability.
-fn generics_for_polymorphism<T, R, Z, X>() where
-    T: Traits,
-    R: Traits,
-    Z: Traits,
-    X: Traits,
+fn generics_for_polymorphism<T, R, Z, X>()
+    where
+        T: Traits,
+        R: Traits,
+        Z: Traits,
+        X: Traits,
 {}
 
-struct Bearer<T: Traits>;
 
-struct Bearer2<T> where T: Traits;
+struct Bearer<T: Traits> {
+    value: T,
+}
+
+struct Bearer2<T> where T: Traits {
+    value: T,
+}

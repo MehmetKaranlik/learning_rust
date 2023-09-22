@@ -16,17 +16,13 @@
             These variables are accessible from anywhere in the program
  */
 
-
-
-
-fn memory() { 
-  stack();
-  heap();
-
+fn memory() {
+    stack();
+    heap();
 }
 
 
-fn heap() { 
+fn heap() {
     // Heap is the memory which is used to store data which is not known at compile time
     // Heap is used to store data which is created at runtime && data which is mutable in nature
     // Heap is less organized than stack, things are not added in sequential order.
@@ -40,26 +36,23 @@ fn heap() {
 
     // Rust does have special method for memory management called drop
     // Drop is called when a variable goes out of scope
-    
-
 }
 
-fn stack() { 
+fn stack() {
     // All the data stored in stack must have a known fixed size at compile time
     // When the program executes some amount memory from stack is allocated for execution of main function
     // All the local variables and arguments to different functions stored in this stack memory
     // Size of stack frame for a method or function is calculated at compile time.
 
     // Every step below adds allocated memory to stack step by step
-    let (x,y) = (5,6);
-    let sum = square_sum(x,y);
-    println!("Sum of squares of {} and {} is {}",x,y,sum);
+    let (x, y) = (5, 6);
+    let sum = square_sum(x, y);
+    println!("Sum of squares of {} and {} is {}", x, y, sum);
 
     // When the all functions above are executed the stack frame is removed from the stack
     // And if the memory goes beyond the allocated memory then stack overflow error occurs
     // One common case for stack overflow is declaring variables in infite loop
 }
-
 
 
 fn square_sum(x: i32, y: i32) -> i32 {

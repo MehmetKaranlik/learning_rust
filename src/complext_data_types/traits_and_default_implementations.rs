@@ -35,11 +35,12 @@ struct Worker;
 impl Person for Student {
     type T = i32;
     const X: i32 = 2;
+
     fn breath_in(&self) { println!("Breath In!") }
 }
 
 impl Person for Worker {
-    type T = str;
+    type T = String;
     fn breath_in(&self) { println!("Breath In!") }
 }
 

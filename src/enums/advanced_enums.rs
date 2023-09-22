@@ -1,7 +1,7 @@
 enum AdvancedEnum {
-    X(str),
+    X(i32),
     Y {
-        a: str,
+        a: &'static str,
         b: i32,
     },
 }
@@ -16,8 +16,8 @@ trait ReturnValue {
 impl ReturnValue for AdvancedEnum {
     fn return_value(&self) -> i32 {
         return match &self {
-            AdvancedEnum::x(..) => 0,
-            AdvancedEnum::y { b, .. } => b,
+            AdvancedEnum::X(..) => 0,
+            AdvancedEnum::Y { b, .. } => *b,
         };
     }
 }
@@ -26,7 +26,7 @@ impl ReturnValue for AdvancedEnum {
 impl AdvancedEnum {
     fn return_name(&self) -> String {
         return match &self {
-            AdvancedEnum::X(str) => str.to_string(),
+            AdvancedEnum::X(i) => i.to_string(),
             AdvancedEnum::Y { a, .. } => a.to_string(),
         };
     }
