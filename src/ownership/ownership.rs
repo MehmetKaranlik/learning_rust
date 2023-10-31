@@ -52,7 +52,7 @@ fn primitive_types() {
 fn non_primitive_types() { 
     let s1 = String::from("hello"); // s1 is the owner of the value "hello"
     //let s2 = s1; // s2 is the owner of the value "hello"
-    // println!("s1: {}, s2: {}", s1, s2); // This will not compile because non primitive types are moved to the new variable 
+    // println!("s1: {}, s2: {}", s1, s2); // This will not compile because non primitive types are moved to the new variable
     // So we cannot use s1 while owner of the particular value is s2
     let s2 = &s1;
     println!("s1: {}, s2: {}", s1, s2); // This will compile because s1 is borrowed to s2
