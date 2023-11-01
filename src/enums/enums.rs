@@ -1,51 +1,39 @@
 /// In rust enumerations have few variants
 
+pub fn _enums() {
+    let mut _a: _BasicEnum = _BasicEnum::Z;
+    _a = _BasicEnum::X;
 
-
-
-pub fn enums() {
-    let mut a: BasicEnum = BasicEnum::z;
-    a = BasicEnum::x;
-
-    let mut b: EnumWithParams = EnumWithParams::y { name: "Value".to_string() };
-    b = EnumWithParams::x("Value".to_string(), 3.12)
+    let mut _b: _EnumWithParams = _EnumWithParams::Y {
+        name: "Value".to_string(),
+    };
+    _b = _EnumWithParams::X("Value".to_string(), 3.12)
 }
 
-
-enum BasicEnum {
-    x,
-    z,
+enum _BasicEnum {
+    X,
+    Z,
 }
 
-
-///An enum where no constructors contain fields are called a field-less enum.
-/// For example, this is a fieldless enum:
-enum FieldlessEnum {
-    Tupple(i32),
-    Struct {
-        a: u8,
-        b: i32,
-    },
+///An enum where no constructors contain fields are called A field-less enum.
+/// For example, this is a field-less enum:
+enum _FieldlessEnum {
+    Tuple(i32),
+    Struct { a: u8, b: i32 },
     Unit,
 }
 
-
-///If a field-less enum only contains unit variants,
+///If A field-less enum only contains unit variants,
 /// the enum is called an unit-only enum. For example:
-enum UnitEnum {
-    a = 1,
-    b = 2,
+enum _UnitEnum {
+    A = 1,
+    B = 2,
 }
-
 
 ///Enum constructors can have either named or unnamed fields:
-enum EnumWithParams {
+enum _EnumWithParams {
     /// Unnamed parameters (Enum variant)
-    x(String, f64),
+    X(String, f64),
     /// Named parameters (Struct-Like enum variant)
-    y { name: String },
+    Y { name: String },
 }
-
-
-
-

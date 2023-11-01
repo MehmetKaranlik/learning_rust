@@ -7,26 +7,26 @@ trait Person {
     type T;
     const X: i32 = 1;
     fn breath_in(&self);
-    fn breath_out(&self) { println!("Breath Out!") }
+    fn breath_out(&self) {
+        println!("Breath Out!")
+    }
 }
 
 /// At below polymorphism is shown over trait
-pub fn traits() {
+pub fn _traits() {
     let student: Student = Student {};
     let worker: Worker = Worker {};
     _static_dispatch(&student);
     _static_dispatch(&worker);
 }
 
-
 fn _static_dispatch<T: Person>(person: &T) {
     person.breath_in();
     person.breath_out();
-    /// god knows why you cant use person.X
-    /// only by T::X
+    // god knows why you cant use person.X
+    // only by T::X
     println!("{}", T::X);
 }
-
 
 struct Student;
 
@@ -36,11 +36,14 @@ impl Person for Student {
     type T = i32;
     const X: i32 = 2;
 
-    fn breath_in(&self) { println!("Breath In!") }
+    fn breath_in(&self) {
+        println!("Breath In!")
+    }
 }
 
 impl Person for Worker {
     type T = String;
-    fn breath_in(&self) { println!("Breath In!") }
+    fn breath_in(&self) {
+        println!("Breath In!")
+    }
 }
-

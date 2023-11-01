@@ -1,25 +1,24 @@
-fn new_stack(capaticty:usize) -> Vec<i32> { 
-    return Vec::with_capacity(capaticty);
+fn _new_stack(capacity: usize) -> Vec<i32> {
+    return Vec::with_capacity(capacity);
 }
 
-
-fn push(stack: &mut Vec<i32>, value: i32) { 
+fn _push(stack: &mut Vec<i32>, value: i32) {
     stack.push(value);
 }
 
-fn pop(stack: &mut Vec<i32>) -> Option<i32> { 
-   return  stack.pop()
+fn _pop(stack: &mut Vec<i32>) -> Option<i32> {
+    return stack.pop();
 }
 
-pub fn stack() { 
-    let mut stack = new_stack(3);
-    push(&mut stack, 1);
-    push(&mut stack, 2);
-    push(&mut stack, 3);
-    push(&mut stack, 4);
+pub fn _stack() {
+    let mut stack = _new_stack(3);
+    _push(&mut stack, 1);
+    _push(&mut stack, 2);
+    _push(&mut stack, 3);
+    _push(&mut stack, 4);
 
     println!("Stack: {:?}", stack);
 
-    let value = pop(&mut stack).unwrap();
+    let value = _pop(&mut stack).unwrap();
     println!("Popped value: {:?}", value);
 }

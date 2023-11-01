@@ -1,15 +1,15 @@
-mod variables;
-mod functions;
-mod ownership;
+mod algorithms;
+mod complex_data_types;
 mod control_flow;
 mod data_structures;
-mod complex_data_types;
 mod enums;
+mod functions;
 mod generics;
 mod hashmaps;
 mod iterators;
+mod ownership;
 mod smart_pointers;
-
+mod variables;
 
 fn main() {
     // variables::basic_variables::variables();
@@ -23,7 +23,9 @@ fn main() {
     // complex_data_types::traits_and_default_implementations::traits()
     // enums::enums::enums()
     // hashmaps::hashmaps::hash_maps()
-    //iterators::iterators::iterators()
-    smart_pointers::smart_pointers::smart_pointers()
+    // iterators::iterators::iterators()
+    // smart_pointers::smart_pointers::smart_pointers()
+    let x: Vec<i32> = [].to_vec();
+    x.iter();
+    std::thread::park();
 }
-

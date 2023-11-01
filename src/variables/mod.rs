@@ -1,5 +1,5 @@
 pub mod basic_variables;
 pub mod compound_variables;
+mod compound_variables_vectors;
 pub mod shadowing;
-mod compount_variables_vectors;
 mod variables;

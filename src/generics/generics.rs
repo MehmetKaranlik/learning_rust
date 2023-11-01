@@ -13,28 +13,31 @@ trait Traits {}
 
 impl Traits for X {}
 
-pub fn generics() {}
+pub fn _generics() {}
 
-fn basic_generic_func<T>(value: T) {}
+fn _basic_generic_func<T>(_value: T) {}
 
 /// const generics
 /// The only allowed types of const parameters are u8, u16, u32, u64, u128, usize, i8, i16, i32, i64, i128, isize, char and bool.
-fn generic_func_with_restraint<const T: i32>() {}
+fn _generic_func_with_restraint<const T: i32>() {}
 
 /// Where clause generally used for if generic is amount is higher, it helps for readability.
-fn generics_for_polymorphism<T, R, Z, X>()
-    where
-        T: Traits,
-        R: Traits,
-        Z: Traits,
-        X: Traits,
-{}
+fn _generics_for_polymorphism<T, R, Z, X>()
+where
+    T: Traits,
+    R: Traits,
+    Z: Traits,
+    X: Traits,
+{
+}
 
-
-struct Bearer<T: Traits> {
+struct _Bearer<T: Traits> {
     value: T,
 }
 
-struct Bearer2<T> where T: Traits {
+struct _Bearer2<T>
+where
+    T: Traits,
+{
     value: T,
 }

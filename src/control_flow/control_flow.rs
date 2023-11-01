@@ -1,18 +1,15 @@
+//noinspection ALL,RsConstantConditionIf
+pub fn _control_flow() {
+    // Simple if as usual in every language
 
-pub fn control_flow() {
-
-    // Simple if as usual in every language 
-
-    if true { 
+    if true {
         println!("This is true");
     } else if false {
         println!("This is false");
-    }else { 
-
+    } else {
     }
 
-
-    // Simple loop 
+    // Simple loop
     let mut i = 0;
     loop {
         println!("Loop: {}", i);
@@ -21,8 +18,6 @@ pub fn control_flow() {
             break;
         }
     }
- 
-
 
     // while loop as usual in every language
 
@@ -50,8 +45,7 @@ pub fn control_flow() {
         println!("For loop with continue and break: {}", i);
     }
 
-
-    // for loop with steps 
+    // for loop with steps
 
     for i in (0..10).step_by(2) {
         println!("For loop with steps: {}", i);
@@ -63,10 +57,10 @@ pub fn control_flow() {
         println!("For loop with reverse: {}", i);
     }
 
-    let  vec = vec!["a", "b", "c", "d", "e"];
+    let vec = vec!["a", "b", "c", "d", "e"];
 
     // for loop with iterator
-    for  element in vec {
+    for element in vec {
         println!("For loop with vector: {}", element);
     }
 
@@ -90,9 +84,4 @@ pub fn control_flow() {
         5 => println!("x is 5"),
         _ => println!("x is something else"),
     }
-
-   
-
-
-
 }

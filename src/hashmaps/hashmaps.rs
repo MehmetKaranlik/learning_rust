@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-pub fn hash_maps() {
+pub fn _hash_maps() {
     let mut person: HashMap<&str, i32>;
     person = HashMap::new();
     person.insert("Mehmet", 28);
