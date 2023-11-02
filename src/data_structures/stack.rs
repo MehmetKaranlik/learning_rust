@@ -26,14 +26,14 @@ impl<T: Copy> Stack<T> {
                 self.head = node.prev;
                 self.length -= 1;
                 Some(node.data)
-            },
+            }
             None => None,
         }
     }
 
-    fn _peek(&self) -> Option<&T> {
+    fn _peek(&self) -> Option<T> {
         match self.head.as_ref() {
-            Some(node) => Some(&node.data),
+            Some(node) => Some(node.data.clone()),
             None => None,
         }
     }
