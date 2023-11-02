@@ -25,7 +25,5 @@ fn main() {
     // hashmaps::hashmaps::hash_maps()
     // iterators::iterators::iterators()
     // smart_pointers::smart_pointers::smart_pointers()
-    let x: Vec<i32> = [].to_vec();
-    x.iter();
     std::thread::park();
 }
