@@ -25,5 +25,6 @@ fn main() {
     // hashmaps::hashmaps::hash_maps()
     // iterators::iterators::iterators()
     // smart_pointers::smart_pointers::smart_pointers()
-    std::thread::park();
+    smart_pointers::reference_counting::rc()
 }
+
