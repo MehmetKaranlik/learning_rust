@@ -1,14 +1,16 @@
 #![allow(unused)]
 
+use std::rc:: { Rc};
+
 struct Queue<T> {
     data: Vec<T>,
-    head: Box<T>,
+    head: Rc<T>,
     length: usize,
 }
 
 impl<T: Copy> Queue<T> {
     pub fn enqueue(&mut self, data: T) {
-        self.head = Box::new(data);
+        self.head = Rc::new(data);
         self.data.push(*self.head);
         self.length += 1;
     }
@@ -19,7 +21,7 @@ impl<T: Copy> Queue<T> {
         }
         self.data.remove(self.data.len() - 1);
         match self.data.last() {
-            Some(&data) => self.head = Box::new(data),
+            Some(&data) => self.head = Rc::new(data),
             None => (),
         }
         self.length -= 1;

@@ -1,3 +1,4 @@
+#![allow(unused)]
 struct StackNode<T: Copy> {
     data: T,
     prev: Option<Box<StackNode<T>>>,
@@ -11,7 +12,7 @@ struct Stack<T: Copy> {
 }
 
 impl<T: Copy> Stack<T> {
-    fn _push(&mut self, data: T) {
+    fn push(&mut self, data: T) {
         let node = StackNode {
             data: data,
             prev: self.head.take(),
@@ -20,7 +21,7 @@ impl<T: Copy> Stack<T> {
         self.length += 1;
     }
 
-    fn _pop(&mut self) -> Option<T> {
+    fn pop(&mut self) -> Option<T> {
         match self.head.take() {
             Some(node) => {
                 self.head = node.prev;
@@ -31,7 +32,7 @@ impl<T: Copy> Stack<T> {
         }
     }
 
-    fn _peek(&self) -> Option<T> {
+    fn peek(&self) -> Option<T> {
         match self.head.as_ref() {
             Some(node) => Some(node.data.clone()),
             None => None,
