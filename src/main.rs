@@ -10,6 +10,7 @@ mod iterators;
 mod ownership;
 mod smart_pointers;
 mod variables;
+mod memory;
 
 fn main() {
     // variables::basic_variables::variables();
@@ -25,6 +26,7 @@ fn main() {
     // hashmaps::hashmaps::hash_maps()
     // iterators::iterators::iterators()
     // smart_pointers::smart_pointers::smart_pointers()
+    memory::avoiding_allocations::take_operation();
     std::thread::park();
 }
 
