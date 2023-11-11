@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 /// RefCell<T> is a type that gives us mutability in an immutable context
 /// RefCell<T> is useful when you’re sure your code follows the borrowing rules but the compiler is unable to understand and guarantee that
 

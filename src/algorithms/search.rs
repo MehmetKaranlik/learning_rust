@@ -2,7 +2,7 @@
 /// It is a brute force algorithm.
 /// It goes through the array one by one until it finds the value.
 /// It's time complexity is O(n).
-pub fn _linear_search<T>(arr: &Vec<T>, predicate: fn(&T) -> bool) -> Option<T> where T: Copy, T: PartialEq {
+pub fn _linear_search<T>(arr: &Vec<T>, predicate: fn(&T) -> bool) -> Option<T> where T: Copy {
     for i in arr.iter() {
         if predicate(i) {
             return Some(*i);
@@ -17,7 +17,7 @@ pub fn _linear_search<T>(arr: &Vec<T>, predicate: fn(&T) -> bool) -> Option<T> w
 /// It splits the array into two halves and checks if the value is in the first half or the second half.
 /// It goes like until array is fully scanned or value found in the array.
 /// It's time complexity is O(log n) or O(n log n).
-pub fn _binary_search<T>(arr: &Vec<T>, value: T) -> Option<usize> where T: Ord, T: PartialEq {
+pub fn _binary_search<T>(arr: &Vec<T>, value: T) -> Option<usize> where T: Ord {
     let mut low = 0;
     let mut high = arr.len();
     while low < high {
