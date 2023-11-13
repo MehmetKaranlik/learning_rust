@@ -1,27 +1,35 @@
+#[allow(dead_code)]
 /// [Struct]
 /// There is nothing new, structs unlike classes cant have methods
 /// Inside their body. just some params and values.
+///
 
-pub fn _structs() {
-    let basic_struct = _BasicStruct {
+struct TupleStruct(i32, i32);
+struct UnitStruct;
+struct BasicStruct {
+    param: String,
+}
+
+
+pub fn structs() {
+    let basic_struct = BasicStruct {
         param: "Value".to_string(),
     };
-    basic_struct._do_something();
-    basic_struct._new_instance();
+    basic_struct.do_something();
+    basic_struct.new();
+
     println!("{}", basic_struct.param);
 }
 
-struct _BasicStruct {
-    param: String,
-}
+
 
 /// Impl block is a simply a way to register methods on a [Struct]
 /// At below we are gonna implement some methods on [BasicStruct]
 /// To assign method to structure we should take [&self] as argument.
 /// [self] means instance itself, [Self] means type.
-impl _BasicStruct {
-    fn _do_something(&self) {}
-    fn _new_instance(&self) -> Self {
+impl BasicStruct {
+    fn do_something(&self) {}
+    fn new(&self) -> Self {
         Self {
             param: "Value".to_string(),
         }

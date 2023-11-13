@@ -1,5 +1,6 @@
-use std::mem::swap;
+
 #[allow(dead_code)]
+use std::mem::swap;
 use std::mem::take;
 
 #[derive(Debug)]
@@ -10,6 +11,7 @@ enum Customer {
 }
 
 impl Customer {
+    #[allow(dead_code)]
     fn promote(&mut self) {
         *self = match self {
             Customer::New { name } => Customer::Loyal { name: take(name) },
@@ -21,6 +23,7 @@ impl Customer {
 }
 
 
+#[allow(dead_code)]
 pub fn take_operation() {
     let mut customer = Customer::New { name: "John".to_owned() };
     let mut customer2 = Customer::Loyal { name: "Doe".to_owned() };
@@ -29,7 +32,7 @@ pub fn take_operation() {
     println!("{:?}", customer);
     println!("{:?}", customer2);
 }
-
+#[allow(dead_code)]
 pub fn swap_operation() {
     let mut customer = Customer::New { name: "John".to_owned() };
     let mut customer2 = Customer::Loyal { name: "Doe".to_owned() };

@@ -1,2 +1,2 @@
-pub mod complex_data_types;
+pub mod structs;
 pub mod traits_and_default_implementations;

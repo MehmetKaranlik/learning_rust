@@ -20,3 +20,5 @@ unsafe fn _option_enum() {
     // Its only usable in unsafe blocks and functions
     _value.clone().unwrap_unchecked();
 }
+
+
