@@ -1,5 +1,5 @@
 mod trait_bounds;
-mod associated_types;
+
 
 
 fn main() {
