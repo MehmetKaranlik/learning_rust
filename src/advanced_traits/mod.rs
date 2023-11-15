@@ -1,5 +1,6 @@
 mod trait_bounds;
 
+#[allow(dead_code)]
 
 
 fn main() {
