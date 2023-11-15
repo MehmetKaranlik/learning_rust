@@ -5,11 +5,14 @@
 ///
 
 struct TupleStruct(i32, i32);
+#[allow(dead_code)]
+
 struct UnitStruct;
 struct BasicStruct {
     param: String,
 }
 
+#[allow(dead_code)]
 
 pub fn structs() {
     let basic_struct = BasicStruct {

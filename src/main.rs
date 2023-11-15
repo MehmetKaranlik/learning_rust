@@ -1,3 +1,4 @@
+
 mod algorithms;
 mod complex_data_types;
 mod control_flow;
@@ -12,8 +13,11 @@ mod smart_pointers;
 mod variables;
 mod memory;
 mod advanced_traits;
+mod multi_threading;
 
-fn main() {
+
+
+ fn main() {
     // variables::basic_variables::variables();
     // variables::shadowing::shadowing();
     // variables::compound_variables::compound_variables();
@@ -28,7 +32,12 @@ fn main() {
     // iterators::iterators::iterators()
     // smart_pointers::smart_pointers::smart_pointers()
     // memory::avoiding_allocations::take_operation();
-    enums::result_enum::question_mark();
+    // enums::result_enum::question_mark();
+    // multi_threading::spawning();
+    // multi_threading::channels::channels();
     std::thread::park();
+
 }
+
+
 

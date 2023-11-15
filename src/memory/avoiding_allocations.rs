@@ -1,7 +1,8 @@
 
-#[allow(dead_code)]
+
 use std::mem::swap;
 use std::mem::take;
+#[allow(dead_code)]
 
 #[derive(Debug)]
 enum Customer {
