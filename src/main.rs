@@ -1,4 +1,3 @@
-
 mod algorithms;
 mod complex_data_types;
 mod control_flow;
@@ -16,8 +15,7 @@ mod advanced_traits;
 mod multi_threading;
 
 
-
- fn main() {
+fn main() {
     // variables::basic_variables::variables();
     // variables::shadowing::shadowing();
     // variables::compound_variables::compound_variables();
@@ -36,7 +34,6 @@ mod multi_threading;
     // multi_threading::spawning();
     // multi_threading::channels::channels();
     std::thread::park();
-
 }
 
 
